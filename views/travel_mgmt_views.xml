@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="travel_mgmt_action" model="ir.actions.act_window">
+        <field name="name">Travel Expenses</field>
+        <field name="res_model">travel.mgmt</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="travel_mgmt_view_list" model="ir.ui.view">
+        <field name="name">travel.mgmt.list</field>
+        <field name="model">travel.mgmt</field>
+        <field name="arch" type="xml">
+            <list string="Travel Management">
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+                <field name="state"/> 
+            </list>
+        </field>
+    </record>
+
+    <record id="travel_mgmt_view_form" model="ir.ui.view">
+        <field name="name">travel.mgmt.form</field>
+        <field name="model">travel.mgmt</field>
+        <field name="arch" type="xml">
+            <form string="Travel Management">
+                <header>
+                    <button name="action_create_expense" type="object" string="Create Expense"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    
+                    <group>
+                        <h1>
+                            <field name="name" placeholder="Name..."/>
+                        </h1>
+                        <field name="notes" string="" placeholder="Type down your notes here..."/>
+                    </group>
+                    
+                    <group>
+                        <field name="date_start"/>
+                        <field name="date_end"/>
+                        <field name="employee_id"/>
+                        <field name="company_id"/>
+                        <field name="payed_by"/>
+                    </group>
+                    
+                    <notebook>
+
+                        <page string="Details">
+                            <list string="Expenses">
+                                <field name="travel_mgmt_lines_ids"/>
+                            </list>
+                        </page>
+                        
+                        <page string="Note">
+                            <field name="notes" label="Note"/>
+                        </page>
+                        
+                    </notebook>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

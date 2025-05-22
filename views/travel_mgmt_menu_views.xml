@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="travel_mgmt_menu_root" name="Travel Management">
+
+        <menuitem id="travel_mgmt_menu"
+            name="Travel Expenses"
+            action="travel_mgmt_action"
+            />
+
+    </menuitem>
+    
+
+</odoo>
