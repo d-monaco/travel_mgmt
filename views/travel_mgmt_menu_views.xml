@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
+    <!-- Uncomment this to have the module appear in the root menu -->
+    <!-- 
     <menuitem id="travel_mgmt_menu_root" name="Travel Management">
 
         <menuitem id="travel_mgmt_menu"
@@ -8,6 +10,19 @@
             action="travel_mgmt_action"
             />
 
+    </menuitem>
+    -->
+
+    <menuitem id="travel_mgmt_menu_first_level"
+        name="Travel Management"
+        parent="hr_expense.menu_hr_expense_root"
+        sequence="50">
+        
+        <menuitem id="travel_mgmt_menu_second_level"
+                name="Travels"
+                action="travel_mgmt_action"
+                />
+    
     </menuitem>
     
 

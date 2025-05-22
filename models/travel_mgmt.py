@@ -73,6 +73,9 @@ class TravelMgmt(models.Model):
                 if not record.name:
                     raise exceptions.ValidationError("Travel name is necessary")
 
+                if not record.payed_by:
+                    raise exceptions.ValidationError("'Payed By' is necessary")
+
                 expense = self.env['hr.expense'].create({
                     'name': record.name,
                     'employee_id': record.employee_id.id,
