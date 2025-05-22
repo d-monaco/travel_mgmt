@@ -16,7 +16,7 @@ class TravelMgmt(models.Model):
     # Il dipendente che ha fatto il viaggio. Prende di default il dipendente collegato all’utente corrente
     employee_id = fields.Many2one("hr.employee",
         string="Employee",
-        default=lambda self: self.env.user,
+        default=lambda self: self.env.user.employee_id if self.env.user.employee_id else '',
     )
 
     # L’azienda del dipendente. Prende di default verso l’azienda corrente

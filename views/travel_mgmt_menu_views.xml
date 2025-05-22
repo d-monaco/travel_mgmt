@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Uncomment this to have the module appear in the root menu -->
-    <!-- 
+    <!-- Comment this to have the module disappear from the root menu -->
     <menuitem id="travel_mgmt_menu_root" name="Travel Management">
 
         <menuitem id="travel_mgmt_menu"
@@ -11,7 +10,7 @@
             />
 
     </menuitem>
-    -->
+    
 
     <menuitem id="travel_mgmt_menu_first_level"
         name="Travel Management"
