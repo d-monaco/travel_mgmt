@@ -5,7 +5,7 @@
     <menuitem id="travel_mgmt_menu_root" name="Travel Management">
 
         <menuitem id="travel_mgmt_menu"
-            name="Travel Expenses"
+            name="Travels"
             action="travel_mgmt_action"
             />
 

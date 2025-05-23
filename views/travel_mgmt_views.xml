@@ -56,7 +56,9 @@
                         </page>
                         
                         <page string="Note">
-                            <field name="notes" label="Note"/>
+                            <group>
+                                <field name="notes"/>
+                            </group>
                         </page>
                         
                     </notebook>
